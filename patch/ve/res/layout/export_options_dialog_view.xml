@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="10.0dp" android:paddingRight="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginTop="7.0dp" android:text="@string/export_dialog_movie_size" />
+    <Spinner android:id="@id/export_option_size" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginTop="7.0dp" android:layout_marginRight="5.0dp" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginTop="7.0dp" android:text="@string/export_dialog_movie_quality" />
+    <Spinner android:id="@id/export_option_quality" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginTop="7.0dp" android:layout_marginRight="5.0dp" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginTop="7.0dp" android:text="@string/vs_frame_rate" />
+    <Spinner android:id="@id/export_option_fps" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginTop="7.0dp" android:layout_marginRight="5.0dp" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginTop="7.0dp" android:text="@string/vs_format" />
+    <Spinner android:id="@id/export_option_fmt" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginTop="7.0dp" android:layout_marginRight="5.0dp" />
+</LinearLayout>

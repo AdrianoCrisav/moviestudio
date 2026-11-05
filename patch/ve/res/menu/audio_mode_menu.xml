@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/vs_split" android:id="@id/action_split_audio" android:title="Dividir" android:showAsAction="ifRoom|withText" />
+    <item android:icon="@drawable/ic_menu_duck" android:id="@id/action_duck" android:title="@string/audio_track_menu_duck" android:checkable="true" android:showAsAction="ifRoom|withText" />
+    <item android:icon="@drawable/ic_menu_delete" android:id="@id/action_remove_audio_track" android:title="@string/remove" android:showAsAction="ifRoom|withText" />
+</menu>

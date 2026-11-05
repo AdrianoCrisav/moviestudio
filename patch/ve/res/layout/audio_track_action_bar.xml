@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" style="@android:style/Widget.Holo.ActionBar"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SeekBar android:id="@id/action_volume" android:paddingLeft="20.0dp" android:paddingRight="20.0dp" android:layout_width="180.0dp" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:max="100" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/action_volume_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_menu_unmute" android:layout_toLeftOf="@id/action_volume" />
+    <TextView android:textSize="18.0sp" android:ellipsize="end" android:id="@id/action_bar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toLeftOf="@id/action_volume_icon" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+</RelativeLayout>

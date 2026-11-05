@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="project_picker_column_width">279.0dp</dimen>
+    <dimen name="project_picker_item_container_width">277.0dp</dimen>
+    <dimen name="project_picker_item_width">243.0dp</dimen>
+    <dimen name="project_picker_item_height">243.0dp</dimen>
+    <dimen name="media_layout_height">128.0dp</dimen>
+    <dimen name="timeline_add_media_button_height">48.0dp</dimen>
+    <dimen name="timeline_add_media_button_top_padding">24.0dp</dimen>
+    <dimen name="overlay_layout_height">64.0dp</dimen>
+    <dimen name="audio_layout_height">64.0dp</dimen>
+    <dimen name="playhead_layout_height">32.0dp</dimen>
+    <dimen name="playhead_layout_text_size">18.0sp</dimen>
+    <dimen name="media_layout_padding">32.0dp</dimen>
+    <dimen name="add_audio_track_button_width">56.0dp</dimen>
+    <dimen name="handle_width">36.0dp</dimen>
+    <dimen name="timeline_separator_height">3.0dp</dimen>
+    <dimen name="playhead_margin_top">8.0dp</dimen>
+    <dimen name="playhead_margin_top_ok">19.0dp</dimen>
+    <dimen name="playhead_margin_top_not_ok">14.0dp</dimen>
+    <dimen name="playhead_margin_bottom">20.0dp</dimen>
+    <dimen name="playhead_tick_height">3.0dp</dimen>
+    <dimen name="timelime_item_vertical_padding">3.0dp</dimen>
+    <dimen name="timelime_item_horizontal_padding">3.0dp</dimen>
+    <dimen name="timelime_transition_vertical_inset">12.0dp</dimen>
+</resources>

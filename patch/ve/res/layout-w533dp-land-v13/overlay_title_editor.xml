@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginTop="10.0dp" android:layout_marginRight="5.0dp" android:layout_marginBottom="15.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginRight="10.0dp">
+            <ImageView android:id="@id/overlay_generic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/effects_generic" />
+            <ImageView android:id="@id/overlay_preview" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <Button android:id="@id/overlay_change_title_template" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="@string/overlay_change_title_template_button_text" />
+    </LinearLayout>>
+
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0dp" android:layout_marginTop="5.0dp">
+        <EditText android:id="@id/overlay_title" android:layout_width="192.0dp" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:layout_marginRight="10.0dp" android:hint="@string/overlay_title_label" android:singleLine="true" />
+        <EditText android:id="@id/overlay_subtitle" android:layout_width="192.0dp" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:layout_marginTop="5.0dp" android:layout_marginRight="10.0dp" android:hint="@string/overlay_subtitle_label" android:singleLine="true" />
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dp">
+            <Button android:id="@id/overlay_ok" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@android:string/ok" android:layout_weight="1.0" android:onClick="onClickHandler" />
+            <Button android:id="@id/overlay_cancel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@android:string/cancel" android:layout_weight="1.0" android:onClick="onClickHandler" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

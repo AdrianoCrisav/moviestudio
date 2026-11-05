@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.holorom.moviestudio">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <application android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher_moviestudio" android:label="@string/short_app_name" android:largeHeap="true">
+        <service android:name="com.android.videoeditor.service.ApiService"/>
+        <activity android:name="com.android.videoeditor.ProjectsActivity" android:theme="@style/Theme.VideoEditorHolo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.android.videoeditor.VideoEditorActivity" android:theme="@style/Theme.VideoEditorHolo">
+            <intent-filter>
+                <action android:name="android.intent.action.EDIT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/transitions_select_transition" android:name="com.android.videoeditor.TransitionsActivity" android:theme="@android:style/Theme.Holo.DialogWhenLarge">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/overlay_title" android:name="com.android.videoeditor.OverlayTitleEditor" android:theme="@android:style/Theme.Holo" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.EDIT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/overlays_select_type" android:name="com.android.videoeditor.OverlayTitleTemplatePicker" android:theme="@android:style/Theme.Holo.DialogWhenLarge">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/effects_select_effect" android:name="com.android.videoeditor.EffectsActivity" android:theme="@android:style/Theme.Holo.DialogWhenLarge">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/pan_zoom_title" android:name="com.android.videoeditor.KenBurnsActivity" android:theme="@android:style/Theme.Holo.DialogWhenLarge"/>
+        <activity android:name="android.media.videoeditor.chadsstacys" android:theme="@style/Theme.VideoEditorHolo" android:exported="false" />
+        <activity android:name="android.media.videoeditor.pipdick" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:configChanges="orientation|screenSize|keyboardHidden|screenLayout" android:exported="false" />
+    </application>
+</manifest>

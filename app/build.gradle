@@ -1,0 +1,39 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'xd.veshim'
+    compileSdk 34
+    defaultConfig { applicationId 'xd.veshim'; minSdk 19; targetSdk 28; versionCode 1; versionName '1' }
+    buildTypes { debug { minifyEnabled false } }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_1_8; targetCompatibility JavaVersion.VERSION_1_8 }
+}
+
+def sdkDirPath = {
+    def lp = rootProject.file('local.properties')
+    if (lp.exists()) {
+        def p = new Properties()
+        lp.withInputStream { p.load(it) }
+        if (p.getProperty('sdk.dir')) return p.getProperty('sdk.dir')
+    }
+    return System.getenv('ANDROID_HOME') ?: System.getenv('ANDROID_SDK_ROOT') ?: ''
+}()
+def javaBin = System.getProperty('java.home') + File.separator + 'bin' + File.separator + 'java'
+def shimApk = layout.buildDirectory.file('outputs/apk/debug/app-debug.apk').get().asFile.absolutePath
+def serialArg = (project.findProperty('serial') ?: '-').toString()
+def freshArg = project.hasProperty('fresh') ? 'fresh' : 'nofresh'
+def ksArg = (project.findProperty('keystore') ?: '-').toString()
+def ksPassArg = (project.findProperty('kspass') ?: 'android').toString()
+def ksAliasArg = (project.findProperty('ksalias') ?: '-').toString()
+
+['buildPatched': 'build', 'installPatched': 'install'].each { name, mode ->
+    tasks.register(name, Exec) {
+        group = 'videoeditor'
+        dependsOn 'assembleDebug'
+        workingDir = rootProject.projectDir
+        commandLine javaBin, '-jar', rootProject.file('patch/vepatch.jar').absolutePath,
+                mode, rootProject.projectDir.absolutePath, shimApk, sdkDirPath, serialArg, freshArg, ksArg, ksPassArg, ksAliasArg
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
