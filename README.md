@@ -4,7 +4,7 @@ A port of the AOSP Movie Studio (Holo UI) to modern Android.
 
 ## Description
 
-Movie Studio for HoloROM, ported to modern Android. HoloROM is not released yet; this repo publishes (with permission) its code ahead of time.
+Movie Studio for HoloROM. HoloROM is not released yet; this repo publishes (with permission) its code ahead of time.
 
 ## Features
 
