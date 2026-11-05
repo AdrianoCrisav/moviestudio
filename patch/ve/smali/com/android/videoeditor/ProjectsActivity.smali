@@ -743,3 +743,18 @@
     .line 158
     return-void
 .end method
+
+.method public onRequestPermissionsResult(I[Ljava/lang/String;[I)V
+    .locals 1
+
+    invoke-static {p0}, Lcom/android/videoeditor/PermGate;->ok(Landroid/app/Activity;)Z
+
+    move-result v0
+
+    if-eqz v0, :out
+
+    invoke-virtual {p0}, Landroid/app/Activity;->recreate()V
+
+    :out
+    return-void
+.end method
